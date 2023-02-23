@@ -14,7 +14,9 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.github.kebluis"
@@ -24,15 +26,13 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.github.kebluis"
+      "package": "com.github.kebluis",
+      "permissions": [
+        "android.permission.NFC"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    },
-    "extra": {
-      "eas": {
-        "projectId": "5a52898f-f44e-4aae-908a-2b91b6346498"
-      }
     },
     "plugins": [
       "react-native-nfc-manager",
@@ -49,6 +49,11 @@
           }
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "b4a5e100-3ede-4615-9aa9-c73bd1f74c92"
+      }
+    }
   }
 }
