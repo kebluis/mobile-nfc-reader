@@ -1,7 +1,7 @@
 ## Overview & Setup
 This is practically a very simple implementation of RFID reading using your mobile phone's NFC reader. Disclaimer, I only provisioned for an android app since I don't own any apple products.
 
-Due to the dependency, react-native-nfc-manager, the reader won't function not unless we run it using the Expo Dev Client. This means that we need to make a prebuild before running the app.
+Due to the dependency, react-native-nfc-manager, the reader won't function not unless we run it using the Expo Dev Client. This means that we need to make a build using the EAS cli and once the apk is installed we'll prebuild our app to see real-time changes
 
 This next one is optional but I'm leaving you with the configuration if you don't want to use the method that I'm exactly using.
 I wirelessly connected my android phone to my computer by using:
@@ -14,6 +14,8 @@ By using the adb cli this means we need to install Android Studio as well.
 1. Android Phone
 2. NFC Built-In
 3. Expo Go App
+4. EAS CLI
+5. EAS account
 
 ## Getting Started
 
@@ -24,7 +26,19 @@ Install the dependencies by running the script:
 npm install
 ```
 
-REQUIRED! pre-build your codes
+Login using your EAS account. *Make sure you've installed the EAS CLI here
+```bash
+eas login
+```
+
+Create your first android build
+```bash
+npm run build:android
+```
+
+After building, install the apk from your eas account.
+
+Once you installed the apk app on your phone, you can easily pre-build your codes to see hot changes on the app.
 ```bash
 npm run prebuild
 ```
